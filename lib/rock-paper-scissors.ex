@@ -1,7 +1,7 @@
 defmodule Games.RockPaperScissors do
   def play() do
-      ai = Enum.random(["rock", "paper", "scissors"])
-      choice = IO.gets("Choose rock, paper, or scissors:") |> String.trim()
+    ai = Enum.random(["rock", "paper", "scissors"])
+    choice = IO.gets("Choose rock, paper, or scissors:") |> String.trim()
 
     cond do
       ai == choice -> "Tie"
@@ -11,7 +11,7 @@ defmodule Games.RockPaperScissors do
       ai == "paper" and choice == "rock" -> "You loose"
       ai == "scissors" and choice == "paper" -> "You loose"
       ai == "scissors" and choice == "rock" -> "You win"
-      true ->  "Try again, #{choice} is not an option"
+      true -> "Try again, #{choice} is not an option"
     end
   end
 end
