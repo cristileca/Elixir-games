@@ -4,7 +4,7 @@ defmodule Games.Wordle do
    """
    @words [
      "banane",
-     "manele",
+     "masina",
      "elixir",
      "twilio"
    ]
@@ -19,7 +19,6 @@ defmodule Games.Wordle do
 
      cond do
        answer == guess ->
-         Games.ScoreTracker.add_points(25)
          IO.puts("You win!")
 
        attempt == 6 ->
