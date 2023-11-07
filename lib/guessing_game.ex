@@ -34,5 +34,4 @@ defmodule Games.GuessingGame do
       guess < num -> guess_bigger(num, acc + 1)
     end
   end
-  
 end
