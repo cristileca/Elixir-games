@@ -6,9 +6,14 @@ defmodule Games.MixProject do
       app: :games,
       version: "0.1.0",
       elixir: "~> 1.15",
+      escript: escript_config(),
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
+  end
+
+  defp escript_config() do
+    [main_module: Games]
   end
 
   # Run "mix help compile.app" to learn about applications.
